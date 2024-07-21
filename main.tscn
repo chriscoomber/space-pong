@@ -1,0 +1,22 @@
+[gd_scene load_steps=6 format=3 uid="uid://drecl8kfgrl12"]
+
+[ext_resource type="Script" path="res://main.gd" id="1_8devt"]
+[ext_resource type="PackedScene" uid="uid://5vuxfk16bysu" path="res://parallax_background.tscn" id="1_r6tdl"]
+[ext_resource type="PackedScene" uid="uid://b5yokxfasqi6v" path="res://spaceship_animation.tscn" id="2_1mkl1"]
+[ext_resource type="PackedScene" uid="uid://cycp3xtmk2t24" path="res://game.tscn" id="3_le6im"]
+[ext_resource type="PackedScene" uid="uid://ibm4r28win81" path="res://ui.tscn" id="4_mg0tg"]
+
+[node name="Main" type="Node"]
+script = ExtResource("1_8devt")
+
+[node name="ParallaxBackground" parent="." instance=ExtResource("1_r6tdl")]
+
+[node name="Game" parent="." instance=ExtResource("3_le6im")]
+autostart = false
+
+[node name="SpaceshipAnimation" parent="." instance=ExtResource("2_1mkl1")]
+
+[node name="UI" parent="." instance=ExtResource("4_mg0tg")]
+
+[connection signal="countdown_finished" from="UI" to="." method="_on_ui_countdown_finished"]
+[connection signal="play_clicked" from="UI" to="." method="_on_ui_play_clicked"]

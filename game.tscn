@@ -1,0 +1,42 @@
+[gd_scene load_steps=6 format=3 uid="uid://cycp3xtmk2t24"]
+
+[ext_resource type="Script" path="res://game.gd" id="1_xjtmt"]
+[ext_resource type="PackedScene" uid="uid://b0jkycw0qdsja" path="res://player.tscn" id="3_yck2a"]
+[ext_resource type="PackedScene" uid="uid://cjevmt16acte2" path="res://ball.tscn" id="4_a26cu"]
+[ext_resource type="PackedScene" uid="uid://clrm2ncn8mtvk" path="res://opponent.tscn" id="4_gs1p3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vljxf"]
+size = Vector2(100, 800)
+
+[node name="Game" type="Node2D"]
+position = Vector2(576, 324)
+script = ExtResource("1_xjtmt")
+autostart = true
+
+[node name="Player" parent="." instance=ExtResource("3_yck2a")]
+
+[node name="Opponent" parent="." instance=ExtResource("4_gs1p3")]
+
+[node name="Ball" parent="." instance=ExtResource("4_a26cu")]
+unique_name_in_owner = true
+
+[node name="YouLose" type="Area2D" parent="."]
+position = Vector2(-500, 0)
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="YouLose"]
+position = Vector2(-126, 0)
+shape = SubResource("RectangleShape2D_vljxf")
+
+[node name="YouWin" type="Area2D" parent="."]
+position = Vector2(500, 0)
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="YouWin"]
+position = Vector2(126, -4)
+shape = SubResource("RectangleShape2D_vljxf")
+
+[connection signal="body_entered" from="YouLose" to="." method="_on_you_lose_body_entered"]
+[connection signal="body_entered" from="YouWin" to="." method="_on_you_win_body_entered"]

@@ -1,0 +1,167 @@
+[gd_scene load_steps=15 format=3 uid="uid://b5yokxfasqi6v"]
+
+[ext_resource type="Script" path="res://spaceship_animation.gd" id="1_bc76l"]
+[ext_resource type="Texture2D" uid="uid://w2swwqx3uvdp" path="res://images/spaceship_animation/spaceship_left.png" id="2_ls7cb"]
+[ext_resource type="Texture2D" uid="uid://bucv1lg2hrox" path="res://images/spaceship_animation/spaceship_right.png" id="2_ptwbb"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wqim6"]
+atlas = ExtResource("2_ls7cb")
+region = Rect2(0, 0, 1152, 648)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_041br"]
+atlas = ExtResource("2_ls7cb")
+region = Rect2(0, 648, 1152, 648)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yax7t"]
+atlas = ExtResource("2_ls7cb")
+region = Rect2(0, 1296, 1152, 648)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_q4jg6"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wqim6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_041br")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yax7t")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rk8sx"]
+atlas = ExtResource("2_ptwbb")
+region = Rect2(0, 0, 1152, 648)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wjuqt"]
+atlas = ExtResource("2_ptwbb")
+region = Rect2(0, 648, 1152, 648)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e0ihk"]
+atlas = ExtResource("2_ptwbb")
+region = Rect2(0, 1296, 1152, 648)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xoadk"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rk8sx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wjuqt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e0ihk")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="Animation" id="Animation_r2xwf"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SpaceshipLeft:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("SpaceshipLeft:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(500, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="Animation" id="Animation_ey7kg"]
+resource_name = "fly_up"
+length = 6.0
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SpaceshipLeft:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0, 0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, -5.5, -0.38, 9.5, 0.62, -6.5, -490, -0.465, 3.5, 0.38, -11.5, -500, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.0001, 2, 2.9, 5, 6)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("SpaceshipLeft:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0, 0),
+"points": PackedFloat32Array(500, -0.25, 0, 0.2, -417, 0, -1, -26, 0.2, 11, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 2, 3, 5, 6)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("SpaceshipRight:position:x")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0, 0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 5.5, -0.38, -9.5, 0.62, 6.5, 490, -0.465, -3.5, 0.38, 11.5, 500, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.0001, 2, 2.9, 5, 6)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("SpaceshipRight:position:y")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0, 0),
+"points": PackedFloat32Array(500, -0.25, 0, 0.2, -417, 0, -1, -26, 0.2, 11, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 2, 3, 5, 6)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_xk86r"]
+_data = {
+"RESET": SubResource("Animation_r2xwf"),
+"fly_up_and_separate": SubResource("Animation_ey7kg")
+}
+
+[node name="SpaceshipAnimation" type="Node2D"]
+position = Vector2(576, 324)
+script = ExtResource("1_bc76l")
+
+[node name="SpaceshipLeft" type="Node2D" parent="."]
+position = Vector2(0, 500)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="SpaceshipLeft"]
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_q4jg6")
+autoplay = "default"
+
+[node name="SpaceshipRight" type="Node2D" parent="."]
+position = Vector2(0, 500)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="SpaceshipRight"]
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_xoadk")
+autoplay = "default"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_xk86r")
+}

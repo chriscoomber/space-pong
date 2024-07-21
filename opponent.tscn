@@ -1,0 +1,51 @@
+[gd_scene load_steps=8 format=3 uid="uid://clrm2ncn8mtvk"]
+
+[ext_resource type="Texture2D" uid="uid://bucv1lg2hrox" path="res://images/spaceship_animation/spaceship_right.png" id="1_qdvj3"]
+[ext_resource type="Script" path="res://opponent.gd" id="1_vaovq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_td2oh"]
+size = Vector2(216, 93.75)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rk8sx"]
+atlas = ExtResource("1_qdvj3")
+region = Rect2(0, 0, 1152, 648)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wjuqt"]
+atlas = ExtResource("1_qdvj3")
+region = Rect2(0, 648, 1152, 648)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e0ihk"]
+atlas = ExtResource("1_qdvj3")
+region = Rect2(0, 1296, 1152, 648)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0uhvi"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rk8sx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wjuqt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e0ihk")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Opponent" type="AnimatableBody2D"]
+position = Vector2(500, 0)
+script = ExtResource("1_vaovq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(47, 1)
+rotation = 4.71239
+shape = SubResource("RectangleShape2D_td2oh")
+one_way_collision = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_0uhvi")
+autoplay = "default"

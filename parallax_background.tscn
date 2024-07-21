@@ -1,0 +1,438 @@
+[gd_scene load_steps=65 format=3 uid="uid://5vuxfk16bysu"]
+
+[ext_resource type="Script" path="res://parallax_background.gd" id="1_ebp8j"]
+[ext_resource type="Texture2D" uid="uid://g6pbwruc7acv" path="res://images/bg_02_h.png" id="2_jvl8c"]
+[ext_resource type="Texture2D" uid="uid://b46fnchelppp2" path="res://images/asteroids.png" id="3_m4wwl"]
+[ext_resource type="Texture2D" uid="uid://dn5u1pab18lka" path="res://images/moon_spin/1.png" id="4_4wrx1"]
+[ext_resource type="Texture2D" uid="uid://dvgu4ymdb7yfa" path="res://images/moon_spin/2.png" id="5_xogf1"]
+[ext_resource type="Texture2D" uid="uid://bj4ycyhf3g3kn" path="res://images/moon_spin/3.png" id="6_o8o0p"]
+[ext_resource type="Texture2D" uid="uid://cg5f0bnnsrqdk" path="res://images/moon_spin/4.png" id="7_7xqjc"]
+[ext_resource type="Texture2D" uid="uid://cajbfa7xkqnpy" path="res://images/moon_spin/5.png" id="8_t6sst"]
+[ext_resource type="Texture2D" uid="uid://dmhg72uylhikf" path="res://images/moon_spin/6.png" id="9_wvewa"]
+[ext_resource type="Texture2D" uid="uid://dspg8sf6r7b4r" path="res://images/moon_spin/7.png" id="10_bujsx"]
+[ext_resource type="Texture2D" uid="uid://ceaqvypxuxqj2" path="res://images/moon_spin/8.png" id="11_j65qb"]
+[ext_resource type="Texture2D" uid="uid://dyyp5gec4yxje" path="res://images/moon_spin/9.png" id="12_4yprh"]
+[ext_resource type="Texture2D" uid="uid://6aonrrn84qq1" path="res://images/moon_spin/10.png" id="13_ms8kp"]
+[ext_resource type="Texture2D" uid="uid://2fobxfxvto2s" path="res://images/moon_spin/11.png" id="14_3lb5m"]
+[ext_resource type="Texture2D" uid="uid://d12wugjd28c3i" path="res://images/moon_spin/12.png" id="15_gkfpm"]
+[ext_resource type="Texture2D" uid="uid://b84gs7uta2axa" path="res://images/moon_spin/13.png" id="16_pssna"]
+[ext_resource type="Texture2D" uid="uid://donw286u7vq6q" path="res://images/moon_spin/14.png" id="17_7ig0j"]
+[ext_resource type="Texture2D" uid="uid://c0d54gmoy7xax" path="res://images/moon_spin/15.png" id="18_iarvl"]
+[ext_resource type="Texture2D" uid="uid://cgl2urelowdim" path="res://images/moon_spin/16.png" id="19_qgver"]
+[ext_resource type="Texture2D" uid="uid://dpu6eikj8pxet" path="res://images/moon_spin/17.png" id="20_xx3uv"]
+[ext_resource type="Texture2D" uid="uid://cgofqa6wepws5" path="res://images/moon_spin/18.png" id="21_1o4bq"]
+[ext_resource type="Texture2D" uid="uid://eb7au21bxjco" path="res://images/moon_spin/19.png" id="22_sxggd"]
+[ext_resource type="Texture2D" uid="uid://d4leitdgn864p" path="res://images/moon_spin/20.png" id="23_l2bl8"]
+[ext_resource type="Texture2D" uid="uid://db3q480cmg4cb" path="res://images/moon_spin/21.png" id="24_ehu8n"]
+[ext_resource type="Texture2D" uid="uid://bugqjbpeqqqa8" path="res://images/moon_spin/22.png" id="25_j50yn"]
+[ext_resource type="Texture2D" uid="uid://cvjkma2tfbhtx" path="res://images/moon_spin/23.png" id="26_1d2sq"]
+[ext_resource type="Texture2D" uid="uid://nwrjmkcbddrw" path="res://images/moon_spin/24.png" id="27_8grvq"]
+[ext_resource type="Texture2D" uid="uid://cl68055dq0ysg" path="res://images/moon_spin/25.png" id="28_5k6bi"]
+[ext_resource type="Texture2D" uid="uid://cgf4qoetqf5r4" path="res://images/moon_spin/26.png" id="29_wa3sm"]
+[ext_resource type="Texture2D" uid="uid://cke81un4lms2k" path="res://images/moon_spin/27.png" id="30_dk8wg"]
+[ext_resource type="Texture2D" uid="uid://dv24d154u75t5" path="res://images/moon_spin/28.png" id="31_mcyfb"]
+[ext_resource type="Texture2D" uid="uid://3ss02ippcarb" path="res://images/moon_spin/29.png" id="32_23bj1"]
+[ext_resource type="Texture2D" uid="uid://whcagucibj8u" path="res://images/moon_spin/30.png" id="33_drl8s"]
+[ext_resource type="Texture2D" uid="uid://dmtt77evpsc7x" path="res://images/moon_spin/31.png" id="34_84gmo"]
+[ext_resource type="Texture2D" uid="uid://d2nhxbceqnoj2" path="res://images/moon_spin/32.png" id="35_25rc6"]
+[ext_resource type="Texture2D" uid="uid://k7knf68wnj27" path="res://images/moon_spin/33.png" id="36_g4qt0"]
+[ext_resource type="Texture2D" uid="uid://h1vd7n50bmph" path="res://images/moon_spin/34.png" id="37_lp1kr"]
+[ext_resource type="Texture2D" uid="uid://p8clfc7x03av" path="res://images/moon_spin/35.png" id="38_nthvq"]
+[ext_resource type="Texture2D" uid="uid://baruvahyxbesl" path="res://images/moon_spin/36.png" id="39_vmdl5"]
+[ext_resource type="Texture2D" uid="uid://rw5eotsxrwk7" path="res://images/moon_spin/37.png" id="40_khaav"]
+[ext_resource type="Texture2D" uid="uid://kc4krqp6j7pr" path="res://images/moon_spin/38.png" id="41_7yaku"]
+[ext_resource type="Texture2D" uid="uid://c6u33l4j10jl4" path="res://images/moon_spin/39.png" id="42_nt6in"]
+[ext_resource type="Texture2D" uid="uid://3t1ugpaemmqg" path="res://images/moon_spin/40.png" id="43_0fpvt"]
+[ext_resource type="Texture2D" uid="uid://dfasmg8yft040" path="res://images/moon_spin/41.png" id="44_ftt0d"]
+[ext_resource type="Texture2D" uid="uid://da77mf7ac24me" path="res://images/moon_spin/42.png" id="45_4w4ob"]
+[ext_resource type="Texture2D" uid="uid://br2ocx7b2lja4" path="res://images/moon_spin/43.png" id="46_d18i5"]
+[ext_resource type="Texture2D" uid="uid://doraqdnew54sj" path="res://images/moon_spin/44.png" id="47_upe4b"]
+[ext_resource type="Texture2D" uid="uid://bf48r44ry475n" path="res://images/moon_spin/45.png" id="48_3pbto"]
+[ext_resource type="Texture2D" uid="uid://c8knvqj655yed" path="res://images/moon_spin/46.png" id="49_bvth0"]
+[ext_resource type="Texture2D" uid="uid://eho4tjc8tkrd" path="res://images/moon_spin/47.png" id="50_1xc8m"]
+[ext_resource type="Texture2D" uid="uid://cuhgcuqsup1l1" path="res://images/moon_spin/48.png" id="51_l7058"]
+[ext_resource type="Texture2D" uid="uid://bwuh646cq8mhp" path="res://images/moon_spin/49.png" id="52_nsv5s"]
+[ext_resource type="Texture2D" uid="uid://4h6r8di6yn4b" path="res://images/moon_spin/50.png" id="53_oap02"]
+[ext_resource type="Texture2D" uid="uid://cv2syrsr7kqil" path="res://images/moon_spin/51.png" id="54_4gfxm"]
+[ext_resource type="Texture2D" uid="uid://c28rt52643al0" path="res://images/moon_spin/52.png" id="55_l1sgw"]
+[ext_resource type="Texture2D" uid="uid://hyn7yuvi0fks" path="res://images/moon_spin/53.png" id="56_267pw"]
+[ext_resource type="Texture2D" uid="uid://dwmmg4q8lvdp6" path="res://images/moon_spin/54.png" id="57_yuw1d"]
+[ext_resource type="Texture2D" uid="uid://bphgbo58iyca7" path="res://images/moon_spin/55.png" id="58_atwe6"]
+[ext_resource type="Texture2D" uid="uid://bnl3eckfdb2yk" path="res://images/moon_spin/56.png" id="59_mbvg0"]
+[ext_resource type="Texture2D" uid="uid://hnosac3uppax" path="res://images/moon_spin/57.png" id="60_kwa7l"]
+[ext_resource type="Texture2D" uid="uid://br2ukt73qi6ji" path="res://images/moon_spin/58.png" id="61_r3ysn"]
+[ext_resource type="Texture2D" uid="uid://bcwg40oo3v7x0" path="res://images/moon_spin/59.png" id="62_fwd0a"]
+[ext_resource type="Texture2D" uid="uid://d2boi5d0gxmje" path="res://images/moon_spin/60.png" id="63_04ys8"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7e2ai"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_4wrx1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_xogf1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_o8o0p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_7xqjc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_t6sst")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_wvewa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_bujsx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_j65qb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_4yprh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_ms8kp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_3lb5m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_gkfpm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_pssna")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_7ig0j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_iarvl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_qgver")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_xx3uv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_1o4bq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_sxggd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_l2bl8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_ehu8n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_j50yn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_1d2sq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_8grvq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_5k6bi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_wa3sm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_dk8wg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_mcyfb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_23bj1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_drl8s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_84gmo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_25rc6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_g4qt0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_lp1kr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_nthvq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_vmdl5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_khaav")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_7yaku")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_nt6in")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_0fpvt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_ftt0d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_4w4ob")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_d18i5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_upe4b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("48_3pbto")
+}, {
+"duration": 1.0,
+"texture": ExtResource("49_bvth0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("50_1xc8m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("51_l7058")
+}, {
+"duration": 1.0,
+"texture": ExtResource("52_nsv5s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("53_oap02")
+}, {
+"duration": 1.0,
+"texture": ExtResource("54_4gfxm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("55_l1sgw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("56_267pw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("57_yuw1d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("58_atwe6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("59_mbvg0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("60_kwa7l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("61_r3ysn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("62_fwd0a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("63_04ys8")
+}],
+"loop": true,
+"name": &"default",
+"speed": 3.0
+}]
+
+[node name="ParallaxBackground" type="ParallaxBackground"]
+offset = Vector2(550, 300)
+transform = Transform2D(1, 0, 0, 1, 550, 300)
+script = ExtResource("1_ebp8j")
+
+[node name="Stars" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(0, 0.01)
+motion_mirroring = Vector2(0, 1500)
+
+[node name="Sprite2D" type="Sprite2D" parent="Stars"]
+texture_repeat = 3
+position = Vector2(-20, -387)
+texture = ExtResource("2_jvl8c")
+region_enabled = true
+region_rect = Rect2(0, 0, 1333, 1500)
+
+[node name="Planets" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(0.25, 0.25)
+motion_mirroring = Vector2(0, 3200)
+
+[node name="Moon1" type="AnimatedSprite2D" parent="Planets"]
+position = Vector2(-149, -474)
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_7e2ai")
+autoplay = "default"
+frame = 32
+
+[node name="Moon2" type="AnimatedSprite2D" parent="Planets"]
+position = Vector2(378, 752)
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_7e2ai")
+autoplay = "default"
+
+[node name="Moon3" type="AnimatedSprite2D" parent="Planets"]
+position = Vector2(-438, 1800)
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_7e2ai")
+autoplay = "default"
+frame = 32
+
+[node name="Asteroids2" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(0.5, 0.5)
+motion_mirroring = Vector2(0, 1600)
+
+[node name="Sprite2D5" type="Sprite2D" parent="Asteroids2"]
+texture_filter = 4
+position = Vector2(86, -1369)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_m4wwl")
+region_enabled = true
+region_rect = Rect2(65.571, 126.923, 61.4712, 63.334)
+
+[node name="Sprite2D4" type="Sprite2D" parent="Asteroids2"]
+texture_filter = 4
+position = Vector2(268, -164)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_m4wwl")
+region_enabled = true
+region_rect = Rect2(129, 62, 68, 60)
+
+[node name="Sprite2D3" type="Sprite2D" parent="Asteroids2"]
+texture_filter = 4
+position = Vector2(-462, -109)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_m4wwl")
+region_enabled = true
+region_rect = Rect2(133, 1, 61, 61)
+
+[node name="Sprite2D" type="Sprite2D" parent="Asteroids2"]
+texture_filter = 4
+position = Vector2(-565, -641)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_m4wwl")
+region_enabled = true
+region_rect = Rect2(0, 0, 63, 66)
+
+[node name="Sprite2D2" type="Sprite2D" parent="Asteroids2"]
+texture_filter = 4
+position = Vector2(-259, -113)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_m4wwl")
+region_enabled = true
+region_rect = Rect2(70, -2, 53, 64)
+
+[node name="Sprite2D6" type="Sprite2D" parent="Asteroids2"]
+texture_filter = 4
+position = Vector2(695.75, 43.25)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_m4wwl")
+region_enabled = true
+region_rect = Rect2(3.1953, 63.0913, 50.9155, 65.8177)
+
+[node name="Sprite2D7" type="Sprite2D" parent="Asteroids2"]
+texture_filter = 4
+position = Vector2(-81.75, 321.75)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_m4wwl")
+region_enabled = true
+region_rect = Rect2(65.571, 126.923, 61.4712, 63.334)
+
+[node name="Sprite2D8" type="Sprite2D" parent="Asteroids2"]
+texture_filter = 4
+position = Vector2(299, 552)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_m4wwl")
+region_enabled = true
+region_rect = Rect2(129, 62, 68, 60)
+
+[node name="Sprite2D9" type="Sprite2D" parent="Asteroids2"]
+texture_filter = 4
+position = Vector2(474, 740)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_m4wwl")
+region_enabled = true
+region_rect = Rect2(133, 1, 61, 61)
+
+[node name="Sprite2D10" type="Sprite2D" parent="Asteroids2"]
+texture_filter = 4
+position = Vector2(-311, 522)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_m4wwl")
+region_enabled = true
+region_rect = Rect2(0, 0, 63, 66)
+
+[node name="Sprite2D11" type="Sprite2D" parent="Asteroids2"]
+texture_filter = 4
+position = Vector2(-351, -52)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_m4wwl")
+region_enabled = true
+region_rect = Rect2(70, -2, 53, 64)
+
+[node name="Sprite2D12" type="Sprite2D" parent="Asteroids2"]
+texture_filter = 4
+position = Vector2(35.25, 1299.75)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_m4wwl")
+region_enabled = true
+region_rect = Rect2(3.1953, 63.0913, 50.9155, 65.8177)
+
+[node name="Asteroids1" type="ParallaxLayer" parent="."]
+motion_mirroring = Vector2(0, 1600)
+
+[node name="Sprite2D5" type="Sprite2D" parent="Asteroids1"]
+texture_filter = 4
+position = Vector2(310.5, -632.5)
+texture = ExtResource("3_m4wwl")
+region_enabled = true
+region_rect = Rect2(65.571, 126.923, 61.4712, 63.334)
+
+[node name="Sprite2D4" type="Sprite2D" parent="Asteroids1"]
+texture_filter = 4
+position = Vector2(-209.5, 180.5)
+texture = ExtResource("3_m4wwl")
+region_enabled = true
+region_rect = Rect2(129, 62, 68, 60)
+
+[node name="Sprite2D3" type="Sprite2D" parent="Asteroids1"]
+texture_filter = 4
+position = Vector2(-593.5, 85.5)
+texture = ExtResource("3_m4wwl")
+region_enabled = true
+region_rect = Rect2(133, 1, 61, 61)
+
+[node name="Sprite2D" type="Sprite2D" parent="Asteroids1"]
+texture_filter = 4
+position = Vector2(-344.5, -503.5)
+texture = ExtResource("3_m4wwl")
+region_enabled = true
+region_rect = Rect2(0, 0, 63, 66)
+
+[node name="Sprite2D2" type="Sprite2D" parent="Asteroids1"]
+texture_filter = 4
+position = Vector2(122.5, -167.5)
+texture = ExtResource("3_m4wwl")
+region_enabled = true
+region_rect = Rect2(70, -2, 53, 64)
+
+[node name="Sprite2D6" type="Sprite2D" parent="Asteroids1"]
+texture_filter = 4
+position = Vector2(427.5, 345.5)
+texture = ExtResource("3_m4wwl")
+region_enabled = true
+region_rect = Rect2(3.1953, 63.0913, 50.9155, 65.8177)

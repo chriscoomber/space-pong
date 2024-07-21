@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://cjevmt16acte2"]
+
+[ext_resource type="Script" path="res://Ball.gd" id="1_pw0lj"]
+[ext_resource type="Texture2D" uid="uid://yijv8q51raub" path="res://images/bomb.png" id="2_hrcrs"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_oujn7"]
+radius = 12.0
+
+[node name="Ball" type="CharacterBody2D"]
+collision_layer = 3
+collision_mask = 3
+motion_mode = 1
+script = ExtResource("1_pw0lj")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_hrcrs")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_oujn7")
+
+[node name="UpperClone" type="Sprite2D" parent="."]
+position = Vector2(0, -648)
+texture = ExtResource("2_hrcrs")
+
+[node name="LowerClone" type="Sprite2D" parent="."]
+position = Vector2(0, 648)
+texture = ExtResource("2_hrcrs")
