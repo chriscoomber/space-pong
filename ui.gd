@@ -46,6 +46,7 @@ func _ready():
 	GlobalConstants.ball_wraparound = $Options/BallWraparoundToggle.button_pressed
 	GlobalConstants.wraparound = $Options/WraparoundToggle.button_pressed
 	GlobalConstants.difficulty = int($Options/HBoxContainer/DifficultySlider.value)
+	GlobalConstants.show_particles = $Options/ParticlesToggle.button_pressed
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
@@ -86,3 +87,6 @@ func _on_ball_wraparound_toggle_toggled(toggled_on):
 	GlobalConstants.ball_wraparound = toggled_on
 	print('Changed ball wraparound: ', GlobalConstants.ball_wraparound)
 
+func _on_particles_toggle_toggled(toggled_on):
+	GlobalConstants.show_particles = toggled_on
+	print('Changed show_particles: ', GlobalConstants.show_particles)

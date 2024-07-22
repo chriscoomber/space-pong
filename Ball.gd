@@ -26,15 +26,16 @@ func start():
 	velocity = Vector2(INITIAL_BALL_SPEED, 0)
 	
 func explode():
-	var particle = explode_particle.instantiate()
 	$Sprite2D.hide()
 	$UpperClone.hide()
 	$LowerClone.hide()
-	add_child(particle)
-	particle.emitting = true
-	await particle.finished
-	remove_child(particle)
-	particle.queue_free()
+	if GlobalConstants.show_particles:
+		var particle = explode_particle.instantiate()
+		add_child(particle)
+		particle.emitting = true
+		await particle.finished
+		remove_child(particle)
+		particle.queue_free()
 
 func _physics_process(delta):
 	if (not _started):

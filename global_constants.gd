@@ -13,3 +13,4 @@ const MAX_Y: float = 240.0
 var ball_wraparound: bool = true
 var wraparound: bool = true
 var difficulty: int = 1
+var show_particles: bool = true

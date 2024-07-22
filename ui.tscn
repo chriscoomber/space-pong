@@ -149,6 +149,11 @@ value = 2.0
 tick_count = 3
 ticks_on_borders = true
 
+[node name="ParticlesToggle" type="CheckButton" parent="Options"]
+layout_mode = 2
+button_pressed = true
+text = "Show particles on death"
+
 [node name="PauseMenu" type="Control" parent="."]
 layout_mode = 1
 anchors_preset = 15
@@ -191,4 +196,5 @@ text = "Exit"
 [connection signal="toggled" from="Options/BallWraparoundToggle" to="." method="_on_ball_wraparound_toggle_toggled"]
 [connection signal="toggled" from="Options/WraparoundToggle" to="." method="_on_wraparound_toggle_toggled"]
 [connection signal="value_changed" from="Options/HBoxContainer/DifficultySlider" to="." method="_on_difficulty_slider_value_changed"]
+[connection signal="toggled" from="Options/ParticlesToggle" to="." method="_on_particles_toggle_toggled"]
 [connection signal="pressed" from="PauseMenu/VBoxContainer/Button" to="." method="_on_button_pressed"]
