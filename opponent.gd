@@ -86,5 +86,18 @@ func _on_ball_ball_collided_with_player(pos: Vector2, vel: Vector2):
 	# Calculate where ball should end up
 	targetY = pos.y + vel.y / vel.x * PADDLE_SEPARATION - 324
 	targetY += randf() * GlobalConstants.INACCURACY * vel.y # some inaccuracy
-	targetY = wrapf(targetY, -324, 324)
 	
+	if GlobalConstants.ball_wraparound:
+		targetY = wrapf(targetY, -324, 324)
+	else:
+		targetY = bouncef(targetY, -324, 324)
+	
+func bouncef(value:float, min:float, max:float) -> float:
+	while value > max or value < min:
+		if value > max:
+			value = max - (value - max)
+			
+		if value < min:
+			value = min + (min - value)
+			
+	return value
