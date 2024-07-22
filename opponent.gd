@@ -90,7 +90,7 @@ func _on_ball_ball_collided_with_player(pos: Vector2, vel: Vector2):
 	if GlobalConstants.ball_wraparound:
 		targetY = wrapf(targetY, -324, 324)
 	else:
-		targetY = bouncef(targetY, -324, 324)
+		targetY = bouncef(targetY, -318, 318)
 	
 func bouncef(value:float, min:float, max:float) -> float:
 	while value > max or value < min:

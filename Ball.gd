@@ -55,9 +55,10 @@ func _physics_process(delta):
 		
 		var speed: float = collider.speed if "speed" in collider else 0.0
 		
-		velocity = velocity.bounce(collision.get_normal())
+		velocity = velocity.bounce(normal)
 		velocity = velocity + Vector2(0.0, speed * GlobalConstants.BALL_Y_GROWTH) + absf(speed) * GlobalConstants.BALL_X_GROWTH * normal
 		
-		if position.x < 576:
+		print(normal, position)
+		if normal.distance_squared_to(Vector2(1.0, 0.0)) < 0.01 and position.x < 76:
 			print("ball hit player paddle")
 			emit_signal("ball_collided_with_player", position, velocity)
