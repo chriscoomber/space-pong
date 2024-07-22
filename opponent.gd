@@ -1,8 +1,8 @@
 extends AnimatableBody2D
 
 const PADDLE_SEPARATION = 1000
-const THINKING_TIME: float = 0.15
-const INACCURACY: float = 0.2
+var thinking_time: float = 0.15
+var inaccuracy: float = 0.2
 
 var _started: bool = false
 var targetY: float = 0.0
@@ -50,7 +50,7 @@ func _physics_process(delta):
 		
 	if not thinking:
 		thinking = true
-		get_tree().create_timer(randf() * THINKING_TIME).timeout.connect(func(): thinking = false)
+		get_tree().create_timer(randf() * GlobalConstants.THINKING_TIME).timeout.connect(func(): thinking = false)
 		# Can calculate whether to thrust or not
 		if speed < 0:
 			# Going up. Where will I reach speed 0?
@@ -85,7 +85,6 @@ func _physics_process(delta):
 func _on_ball_ball_collided_with_player(pos: Vector2, vel: Vector2):
 	# Calculate where ball should end up
 	targetY = pos.y + vel.y / vel.x * PADDLE_SEPARATION - 324
-	targetY += randf() * INACCURACY * vel.y # some inaccuracy
-	print(INACCURACY * vel.y)
+	targetY += randf() * GlobalConstants.INACCURACY * vel.y # some inaccuracy
 	targetY = wrapf(targetY, -324, 324)
 	

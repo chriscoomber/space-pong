@@ -40,28 +40,88 @@ animations = [{
 position = Vector2(-500, 0)
 script = ExtResource("1_r571m")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionMain" type="CollisionShape2D" parent="."]
 position = Vector2(-47, 1)
 rotation = 1.5708
 shape = SubResource("RectangleShape2D_td2oh")
 one_way_collision = true
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="SpriteMain" type="AnimatedSprite2D" parent="."]
 scale = Vector2(0.5, 0.5)
 sprite_frames = SubResource("SpriteFrames_xcpdc")
 autoplay = "default"
 
-[node name="TopWound" type="Sprite2D" parent="."]
+[node name="CollisionAbove" type="CollisionShape2D" parent="."]
+position = Vector2(-47, -647)
+rotation = 1.5708
+shape = SubResource("RectangleShape2D_td2oh")
+one_way_collision = true
+
+[node name="SpriteAbove" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -648)
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_xcpdc")
+autoplay = "default"
+
+[node name="CollisionBelow" type="CollisionShape2D" parent="."]
+position = Vector2(-47, 649)
+rotation = 1.5708
+shape = SubResource("RectangleShape2D_td2oh")
+one_way_collision = true
+
+[node name="SpriteBelow" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, 648)
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_xcpdc")
+autoplay = "default"
+
+[node name="TopWound" type="Node2D" parent="."]
 position = Vector2(-5.5, -37)
+
+[node name="Above" type="Sprite2D" parent="TopWound"]
+position = Vector2(0, -648)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("3_agpnv")
 
-[node name="MiddleWound" type="Sprite2D" parent="."]
+[node name="Main" type="Sprite2D" parent="TopWound"]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_agpnv")
+
+[node name="Below" type="Sprite2D" parent="TopWound"]
+position = Vector2(0, 648)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_agpnv")
+
+[node name="MiddleWound" type="Node2D" parent="."]
 position = Vector2(-5.5, -3.5)
+
+[node name="Above" type="Sprite2D" parent="MiddleWound"]
+position = Vector2(0, -648)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("3_agpnv")
 
-[node name="BottomWound" type="Sprite2D" parent="."]
+[node name="Main" type="Sprite2D" parent="MiddleWound"]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_agpnv")
+
+[node name="Below" type="Sprite2D" parent="MiddleWound"]
+position = Vector2(0, 648)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_agpnv")
+
+[node name="BottomWound" type="Node2D" parent="."]
 position = Vector2(-5.5, 30)
+
+[node name="Above" type="Sprite2D" parent="BottomWound"]
+position = Vector2(0, -648)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_agpnv")
+
+[node name="Main" type="Sprite2D" parent="BottomWound"]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_agpnv")
+
+[node name="Below" type="Sprite2D" parent="BottomWound"]
+position = Vector2(0, 648)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("3_agpnv")

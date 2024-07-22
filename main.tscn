@@ -21,4 +21,5 @@ autostart = false
 [connection signal="lose" from="Game" to="." method="_on_game_lose"]
 [connection signal="win" from="Game" to="." method="_on_game_win"]
 [connection signal="countdown_finished" from="UI" to="." method="_on_ui_countdown_finished"]
+[connection signal="exit_game" from="UI" to="." method="_on_ui_exit_game"]
 [connection signal="play_clicked" from="UI" to="." method="_on_ui_play_clicked"]

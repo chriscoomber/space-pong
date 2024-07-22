@@ -40,11 +40,12 @@ func _physics_process(delta):
 	if (not _started):
 		return;
 
-	# Wrap at the top and bottom
-	if (position.y > SCREEN_HEIGHT/2-BALL_HEIGHT):
-		position.y -= SCREEN_HEIGHT
-	if (position.y < -SCREEN_HEIGHT/2+BALL_HEIGHT):
-		position.y += SCREEN_HEIGHT
+	if GlobalConstants.ball_wraparound:
+		# Wrap at the top and bottom
+		if (position.y > SCREEN_HEIGHT/2 - BALL_HEIGHT):
+			position.y -= SCREEN_HEIGHT
+		if (position.y < -SCREEN_HEIGHT/2 + BALL_HEIGHT):
+			position.y += SCREEN_HEIGHT
 	
 	var collision = move_and_collide(velocity * delta)
 	if collision:
@@ -55,7 +56,7 @@ func _physics_process(delta):
 		var speed: float = collider.speed if "speed" in collider else 0.0
 		
 		velocity = velocity.bounce(collision.get_normal())
-		velocity = velocity + Vector2(0.0, speed * 0.75) + absf(speed) * 0.2 * normal
+		velocity = velocity + Vector2(0.0, speed * GlobalConstants.BALL_Y_GROWTH) + absf(speed) * GlobalConstants.BALL_X_GROWTH * normal
 		
 		if position.x < 576:
 			print("ball hit player paddle")

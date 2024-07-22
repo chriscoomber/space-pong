@@ -1,5 +1,7 @@
 extends AnimatableBody2D
 
+const SCREEN_HEIGHT: int = 648
+
 var speed: float = 0.0
 
 var health: int = 3:
@@ -23,7 +25,29 @@ var health: int = 3:
 var _started: bool = false
 
 func start():
-	print('player start')
+	if (GlobalConstants.wraparound):
+		$CollisionAbove.set_deferred("disabled", false)
+		$CollisionBelow.set_deferred("disabled", false)
+		$SpriteAbove.show()
+		$SpriteBelow.show()
+		$TopWound/Above.show()
+		$TopWound/Below.show()
+		$MiddleWound/Above.show()
+		$MiddleWound/Below.show()
+		$BottomWound/Above.show()
+		$BottomWound/Below.show()
+	else:
+		$CollisionAbove.set_deferred("disabled", true)
+		$CollisionBelow.set_deferred("disabled", true)
+		$SpriteAbove.hide()
+		$SpriteBelow.hide()
+		$TopWound/Above.hide()
+		$TopWound/Below.hide()
+		$MiddleWound/Above.hide()
+		$MiddleWound/Below.hide()
+		$BottomWound/Above.hide()
+		$BottomWound/Below.hide()
+		
 	_started = true
 	position.y = 0.0
 	speed = 0.0
@@ -45,4 +69,13 @@ func _physics_process(delta):
 	else:
 		speed = clampf(speed + delta * GlobalConstants.GRAVITY, -GlobalConstants.MAX_SPEED, GlobalConstants.MAX_SPEED)
 	
-	position.y = clampf(position.y + delta * speed, -GlobalConstants.MAX_Y, GlobalConstants.MAX_Y)
+	position.y = position.y + delta * speed
+	
+	if GlobalConstants.wraparound:
+		# Wrap at the top and bottom
+		if (position.y > SCREEN_HEIGHT/2):
+			position.y -= SCREEN_HEIGHT
+		if (position.y < -SCREEN_HEIGHT/2):
+			position.y += SCREEN_HEIGHT
+	else:
+		position.y = clampf(position.y + delta * speed, -GlobalConstants.MAX_Y, GlobalConstants.MAX_Y)
