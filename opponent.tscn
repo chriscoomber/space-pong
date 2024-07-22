@@ -1,7 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://clrm2ncn8mtvk"]
+[gd_scene load_steps=9 format=3 uid="uid://clrm2ncn8mtvk"]
 
 [ext_resource type="Texture2D" uid="uid://bucv1lg2hrox" path="res://images/spaceship_animation/spaceship_right.png" id="1_qdvj3"]
 [ext_resource type="Script" path="res://opponent.gd" id="1_vaovq"]
+[ext_resource type="Texture2D" uid="uid://c3iqml3krml3g" path="res://images/spaceship_animation/wounded_right.png" id="3_k74cl"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_td2oh"]
 size = Vector2(216, 93.75)
@@ -49,3 +50,18 @@ one_way_collision = true
 scale = Vector2(0.5, 0.5)
 sprite_frames = SubResource("SpriteFrames_0uhvi")
 autoplay = "default"
+
+[node name="TopWound" type="Sprite2D" parent="."]
+position = Vector2(5.5, -37)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_k74cl")
+
+[node name="MiddleWound" type="Sprite2D" parent="."]
+position = Vector2(5.5, -3.5)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_k74cl")
+
+[node name="BottomWound" type="Sprite2D" parent="."]
+position = Vector2(5.5, 30)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_k74cl")

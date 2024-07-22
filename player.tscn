@@ -1,7 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://b0jkycw0qdsja"]
+[gd_scene load_steps=9 format=3 uid="uid://b0jkycw0qdsja"]
 
 [ext_resource type="Texture2D" uid="uid://w2swwqx3uvdp" path="res://images/spaceship_animation/spaceship_left.png" id="1_go5hm"]
 [ext_resource type="Script" path="res://player.gd" id="1_r571m"]
+[ext_resource type="Texture2D" uid="uid://btbs0b0q1k1y0" path="res://images/spaceship_animation/wounded_left.png" id="3_agpnv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_td2oh"]
 size = Vector2(216, 93.75)
@@ -49,3 +50,18 @@ one_way_collision = true
 scale = Vector2(0.5, 0.5)
 sprite_frames = SubResource("SpriteFrames_xcpdc")
 autoplay = "default"
+
+[node name="TopWound" type="Sprite2D" parent="."]
+position = Vector2(-5.5, -37)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_agpnv")
+
+[node name="MiddleWound" type="Sprite2D" parent="."]
+position = Vector2(-5.5, -3.5)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_agpnv")
+
+[node name="BottomWound" type="Sprite2D" parent="."]
+position = Vector2(-5.5, 30)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_agpnv")

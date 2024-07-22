@@ -18,5 +18,7 @@ autostart = false
 
 [node name="UI" parent="." instance=ExtResource("4_mg0tg")]
 
+[connection signal="lose" from="Game" to="." method="_on_game_lose"]
+[connection signal="win" from="Game" to="." method="_on_game_win"]
 [connection signal="countdown_finished" from="UI" to="." method="_on_ui_countdown_finished"]
 [connection signal="play_clicked" from="UI" to="." method="_on_ui_play_clicked"]

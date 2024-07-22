@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://clrm2ncn8mtvk" path="res://opponent.tscn" id="4_gs1p3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vljxf"]
-size = Vector2(100, 800)
+size = Vector2(139, 800)
 
 [node name="Game" type="Node2D"]
 position = Vector2(576, 324)
@@ -18,7 +18,7 @@ autostart = true
 [node name="Opponent" parent="." instance=ExtResource("4_gs1p3")]
 
 [node name="Ball" parent="." instance=ExtResource("4_a26cu")]
-unique_name_in_owner = true
+autostart = false
 
 [node name="YouLose" type="Area2D" parent="."]
 position = Vector2(-500, 0)
@@ -26,7 +26,7 @@ collision_layer = 2
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="YouLose"]
-position = Vector2(-126, 0)
+position = Vector2(-106.5, 0)
 shape = SubResource("RectangleShape2D_vljxf")
 
 [node name="YouWin" type="Area2D" parent="."]
@@ -35,8 +35,9 @@ collision_layer = 2
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="YouWin"]
-position = Vector2(126, -4)
+position = Vector2(106, -4)
 shape = SubResource("RectangleShape2D_vljxf")
 
+[connection signal="ball_collided_with_player" from="Ball" to="Opponent" method="_on_ball_ball_collided_with_player"]
 [connection signal="body_entered" from="YouLose" to="." method="_on_you_lose_body_entered"]
 [connection signal="body_entered" from="YouWin" to="." method="_on_you_win_body_entered"]
